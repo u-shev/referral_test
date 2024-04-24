@@ -2,3 +2,4 @@
 referral/referral/.env
 referral/users/__pycache__
 referral/referral/__pycache__
+db.sqlite3
