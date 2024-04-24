@@ -6,8 +6,8 @@ services:
       - ./referral:/referral
     env_file:
       - ./referral/.env
-    expose:
-      - 8000
+    ports:
+      - 8000:8000
     command: >
       sh -c "python manage.py makemigrations &&
              python manage.py migrate &&
