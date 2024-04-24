@@ -1,0 +1,4 @@
+.venv
+referral/referral/.env
+referral/users/__pycache__
+referral/referral/__pycache__

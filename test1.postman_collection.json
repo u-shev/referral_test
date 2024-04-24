@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "b0aca733-8c81-4a79-89aa-91a2f7760c8d",
+		"name": "test1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29158795"
+	},
+	"item": [
+		{
+			"name": "Create user1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": \"+79999999999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/create_user/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user1 profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDg3NTYxLCJpYXQiOjE3MTM4ODI3NjEsImp0aSI6IjlkYzhiMjczMDc3OTQxZGViMTQxNjU3NmVmYzBmMDU5IiwidXNlcl9pZCI6NH0.CeQixiOqi3jjm6GTO2CnAt0Uqa6nTghjJypg4ywQgC0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/profile/"
+			},
+			"response": [
+				{
+					"name": "Get user1 profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDg3NTYxLCJpYXQiOjE3MTM4ODI3NjEsImp0aSI6IjlkYzhiMjczMDc3OTQxZGViMTQxNjU3NmVmYzBmMDU5IiwidXNlcl9pZCI6NH0.CeQixiOqi3jjm6GTO2CnAt0Uqa6nTghjJypg4ywQgC0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/profile/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 23 Apr 2024 16:35:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PATCH, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"phone_number\": \"+79999999999\",\n    \"referral_code\": \"-syMWA\",\n    \"referred_users\": [\n        \"+79999999111\"\n    ],\n    \"invite_code\": \"\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create user2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone_number\": \"+79999999111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/auth/create_user/"
+			},
+			"response": [
+				{
+					"name": "Create user2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone_number\": \"+79999999111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/auth/create_user/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 23 Apr 2024 16:35:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "232"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDk0OTU4LCJpYXQiOjE3MTM4OTAxNTgsImp0aSI6IjIxM2I0M2UwNTZlMDRhZGJhOGNhZDJiZGRhMDY1Nzc3IiwidXNlcl9pZCI6NX0.e1hJ7yTOXhxd9SSlCVwK6y9VkfBriiYVLHINi3tRayg\"\n]"
+				}
+			]
+		},
+		{
+			"name": "User2 add referral",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDg4MDI4LCJpYXQiOjE3MTM4ODMyMjgsImp0aSI6ImQzODAxZjMzZTI0MDQwODFiNzcwZmEyOWFkNGExNjY1IiwidXNlcl9pZCI6NX0.2G3K3W6isKLgzclZmN6W2wH-eF1b-DV51VlZIX1LsyM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"invite_code\": \"-syMWA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/profile/"
+			},
+			"response": []
+		}
+	]
+}

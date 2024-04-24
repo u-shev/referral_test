@@ -1,0 +1,29 @@
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - ./referral:/referral
+    env_file:
+      - ./referral/.env
+    expose:
+      - 8000
+    command: >
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn -w 5 -b 0.0.0.0:8000 referral.wsgi"
+
+    depends_on:
+      - database
+
+  database:
+    image: postgres:14.6-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    env_file:
+      - ./referral/.env
+
+
+volumes:
+  postgres-data:
